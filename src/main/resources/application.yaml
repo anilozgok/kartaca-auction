@@ -26,6 +26,10 @@ spring:
 redis:
   hostName: localhost
 
+jwt:
+  secret-key: 68576D5A7134743777217A25432A462D4A404E635266556A586E327235753878
+  expiration: 86400000
+
 logging:
   level:
     tracer: TRACE
