@@ -1,0 +1,49 @@
+version: '3.1'
+
+services:
+  app:
+    container_name: kartaca-task
+    build: ./
+    ports:
+      - "8080:8080"
+    depends_on:
+      - redis
+      - postgresql
+    networks:
+      - kartaca-task
+    environment:
+      - spring.datasource.url=jdbc:postgresql://postgresql/UserDB
+      - redis.hostName=redis
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+    networks:
+      - kartaca-task
+  postgresql:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_USER=test
+      - POSTGRES_DB=UserDB
+    networks:
+      - kartaca-task
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - "5050:80"
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=test@test.com
+      - PGADMIN_DEFAULT_PASSWORD=test
+    depends_on:
+      - postgresql
+    networks:
+      - kartaca-task
+
+
+
+networks:
+  kartaca-task:
+    driver: bridge
