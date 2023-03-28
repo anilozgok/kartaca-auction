@@ -1,25 +1,21 @@
 package com.anilcan.kartaca.model.entity;
 
-import com.anilcan.kartaca.model.utils.Gender;
+import com.anilcan.kartaca.utils.Gender;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-import java.util.UUID;
+import lombok.*;
 
 @Entity
 @Getter
 @Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table
+@Table(name = "users")
 public class User {
     @Id
-    @GeneratedValue
     @Column(nullable = false)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
 
     @Column(nullable = false)
     private String firstName;

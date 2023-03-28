@@ -1,4 +1,4 @@
-package com.anilcan.kartaca.model.utils;
+package com.anilcan.kartaca.utils;
 
 public enum Gender {
     MALE,
