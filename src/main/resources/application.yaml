@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:USER_DB
+    url: jdbc:postgresql://localhost:5432/UserDB
     username: test
     password: test
 
@@ -12,8 +12,25 @@ spring:
       hibernate:
         show_sql: true
         format_sql: true
-        dialect: org.hibernate.dialect.H2Dialect
+        dialect: org.hibernate.dialect.PostgreSQLDialect
 
   jackson:
     mapper:
       accept-case-insensitive-enums: true
+
+  security:
+    user:
+      name: test
+      password: test
+
+redis:
+  hostName: localhost
+
+logging:
+  level:
+    tracer: TRACE
+    org.zalando.logbook: TRACE
+    org.hibernate.SQL: DEBUG
+    com.netflix.eureka: 'OFF'
+    org.elasticsearch.client.RestClient: ERROR
+
