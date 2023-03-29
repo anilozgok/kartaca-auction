@@ -1,4 +1,4 @@
-package com.anilcan.kartaca.config;
+package com.anilcan.kartaca.filter;
 
 import com.anilcan.kartaca.service.JwtService;
 import io.jsonwebtoken.Claims;
