@@ -31,7 +31,7 @@ jwt:
   expiration: 86400000
 
 socket:
-  host-name: 192.168.1.33
+  host-name: 0.0.0.0
   port: 9090
 
 logging:
