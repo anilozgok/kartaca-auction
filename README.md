@@ -64,6 +64,13 @@ Sample Request Body:
 NOTE: You need to authorize requests with the jwt (bearer) token that returns as a response.
 ```
 
+To get items:
+```http request
+http://localhost:8080/api/item/all
+
+NOTE: You need to authorize requests with the jwt (bearer) token that returns as a response.
+```
+
 Also, you can find HTTP requests on postman collection file.
 
 We are using web socket to live follow of the auction without refreshing page because in websocket once you obtain the connection 
