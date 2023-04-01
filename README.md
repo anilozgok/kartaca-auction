@@ -74,34 +74,34 @@ Before that we need to make a little settings on Postman websocket request.
 >Step 1: We need to create new websocket request and change websocket type from Raw to Socket.IO and 
 > give out websocket endpoint which is ```ws://localhost:9090```
 > 
-> ![socket-settings-1.png](target%2Fimage-resources%2Fsocket-settings-1.png)
+> ![socket-settings-1.png](.mvn%2Fimage-resources%2Fsocket-settings-1.png)
 
 > Step 2: We need to set client version to v2. Also, you can arrange some other settings to such as 
 > handshake request timeout, reconnection attempts and reconnection intervals.
 > 
-> ![socket-settings-2.png](target%2Fimage-resources%2Fsocket-settings-2.png)
+> ![socket-settings-2.png](.mvn%2Fimage-resources%2Fsocket-settings-2.png)
 
 
 > Step 3: After setting our websocket type, giving endpoint and setting client verison. We need to listen our event
 > which we will define under the Events section. We need to specify event name which is ```getBidDetails``` and activate the listen the event.
 > 
-> ![socket-settings-2.png](target%2Fimage-resources%2Fsocket-settings-3.png)
+> ![socket-settings-3.png](.mvn%2Fimage-resources%2Fsocket-settings-3.png)
 
 > Step 4: Now you can successfully connect to websocket.
 > 
-> ![socket-settings-4.png](target%2Fimage-resources%2Fsocket-settings-4.png)
+> ![socket-settings-4.png](.mvn%2Fimage-resources%2Fsocket-settings-4.png)
 
 > Step 5: To make a bid on websocket you can create new websocket request and apply first 4 steps. 
 > After that to make a bid we need to send a message to websocket. 
 > So in the message section we send our bid offer details. Sample message body shown in the image below.
 > Don't forget to select message type as JSON, and specify the event name that offers bid which is ``makeBid``
-> 
-![socket-settings-5.png](target%2Fimage-resources%2Fsocket-settings-5.png)
+>
+> ![socket-settings-5.png](.mvn%2Fimage-resources%2Fsocket-settings-5.png)
 
 > Step 6: Now you can send your bid offer and our listener event ``getBidDetails`` will know that you made a bid offer 
 > and it will get your bid details without need for refreshing the page.  
-> 
-![socket-settings-6.png](target%2Fimage-resources%2Fsocket-settings-6.png)
+>
+> ![socket-settings-6.png](.mvn%2Fimage-resources%2Fsocket-settings-6.png)
 
 
 To access pgadmin panel
